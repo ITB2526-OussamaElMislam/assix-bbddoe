@@ -2,7 +2,7 @@
 
 docker run --name oussama -p3307:3306 -e MYSQL_ROOT_PASSWORD=1234 -d mysql:latest
 
-docker run --name oussama -p3307:3306 -e MYSQL_ROOT_PASSWORD=1234 -d mysql:latest
+docker run --name my-phpmyadmin -d --link oussama:db -p 8080:80 phpmyadmin/phpmyadmin
 
 installamos los plugins en en el icono de la cajita
 
